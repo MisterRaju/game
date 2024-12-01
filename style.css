@@ -1,0 +1,187 @@
+/* Global styles */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+/* Canvas styles */
+#gameCanvas {
+  border: 2px solid #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* UI container */
+.ui {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+  padding: 10px;
+  z-index: 10;
+}
+
+/* Game Stats Box */
+#gameStats {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+}
+
+/* Score, Bullet count, Timer styling */
+#score,
+#bulletCount,
+#timer {
+  font-size: 1.2rem;
+  color: #ecf0f1;
+  margin: 0;
+  padding: 10px 20px;
+  background: rgba(44, 62, 80, 0.7);
+  border-radius: 5px;
+  width: 100%;
+  text-align: right;
+}
+
+/* Popup styling */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ecf0f1;
+  text-align: center;
+}
+
+.popup-content p {
+  margin: 0 0 20px;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  background: #3498db;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-content button:hover {
+  background: #2980b9;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens 768px and below (Tablets and smaller devices) */
+@media screen and (max-width: 768px) {
+  #gameStats {
+    padding: 15px;
+    width: 160px;
+  }
+
+  #score,
+  #bulletCount,
+  #timer {
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  #gameCanvas {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Adjust position of game stats for smaller devices */
+  .ui {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+/* For screens 480px and below (Mobile devices) */
+@media screen and (max-width: 480px) {
+  #gameStats {
+    padding: 10px;
+    width: 140px;
+  }
+
+  #score,
+  #bulletCount,
+  #timer {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  #gameCanvas {
+    width: 95%;
+    height: auto;
+  }
+
+  /* Adjust the UI to fit small screens */
+  .ui {
+    top: 5px;
+    right: 5px;
+  }
+
+  /* Adjust popup styles for small screens */
+  #popup {
+    padding: 20px;
+  }
+
+  .popup-content button {
+    padding: 8px 16px;
+  }
+}
+
+/* For very small screens (e.g., Portrait mobile phones) */
+@media screen and (max-width: 375px) {
+  #gameStats {
+    width: 120px;
+    padding: 8px;
+  }
+
+  #score,
+  #bulletCount,
+  #timer {
+    font-size: 0.85rem;
+  }
+
+  #gameCanvas {
+    width: 90%;
+    height: auto;
+  }
+
+  .ui {
+    padding: 5px;
+  }
+
+  #popup {
+    padding: 15px;
+  }
+
+  .popup-content button {
+    padding: 6px 14px;
+  }
+}
