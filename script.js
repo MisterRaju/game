@@ -44,7 +44,7 @@ const goldenBoxSpawnInterval = 5000; // Interval to spawn golden boxes
 const healthBarWidth = 10; // Width of the health bar
 const healthBarX = 10; // X position for the health bar
 const healthBarY = 10; // Y position for the health bar
-const maxHealthBarHeight = window.innerHeight; // Max height of the health bar
+const maxHealthBarHeight = window.innerHeight/5; // Max height of the health bar
 const leaderboardKey = "leaderboard"; // Key for local storage leaderboard
 const leaderboardWidth = 200; // Example width for leaderboard area in pixels
 
